@@ -1,0 +1,7 @@
+/Users/leto/development/github/nppPluginsMacOS/qkNppReverseLines/build/CMakeFiles/qkNppReverseLines.dir
+/Users/leto/development/github/nppPluginsMacOS/qkNppReverseLines/build/CMakeFiles/edit_cache.dir
+/Users/leto/development/github/nppPluginsMacOS/qkNppReverseLines/build/CMakeFiles/rebuild_cache.dir
+/Users/leto/development/github/nppPluginsMacOS/qkNppReverseLines/build/CMakeFiles/list_install_components.dir
+/Users/leto/development/github/nppPluginsMacOS/qkNppReverseLines/build/CMakeFiles/install.dir
+/Users/leto/development/github/nppPluginsMacOS/qkNppReverseLines/build/CMakeFiles/install/local.dir
+/Users/leto/development/github/nppPluginsMacOS/qkNppReverseLines/build/CMakeFiles/install/strip.dir
