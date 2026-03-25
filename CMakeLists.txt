@@ -1,7 +1,8 @@
 cmake_minimum_required(VERSION 3.20)
-project(qkNppReverseLines LANGUAGES CXX)
+project(qkNppReverseLines LANGUAGES CXX OBJCXX)
 
 set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_OBJCXX_STANDARD 17)
 set(CMAKE_CXX_VISIBILITY_PRESET hidden)
 
 # Path to the Notepad++ macOS port for shared headers
@@ -11,7 +12,11 @@ set(SCINTILLA_INCLUDE "${NPP_WIN_DIR}/scintilla/include")
 set(NPP_PLUGIN_INCLUDE "${NPP_MACOS_DIR}/src")
 
 add_library(qkNppReverseLines SHARED
-    src/ReverseLines.cpp
+    src/ReverseLines.mm
+)
+
+target_link_libraries(qkNppReverseLines PRIVATE
+    "-framework Cocoa"
 )
 
 target_include_directories(qkNppReverseLines PRIVATE

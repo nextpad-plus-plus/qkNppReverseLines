@@ -8,6 +8,8 @@
 
 #include "NppPluginInterfaceMac.h"
 #include "Scintilla.h"
+
+#import <Cocoa/Cocoa.h>
 #include <cstring>
 #include <cstdlib>
 
@@ -122,11 +124,14 @@ static void reverseDocument()
 
 static void aboutDlg()
 {
-    // Simple message — no Win32 MessageBox needed.
-    // The host doesn't support NPPM_SHOWMESSAGEBOX yet, so we use a minimal approach:
-    // write to stdout (visible in Console.app) or we can just do nothing visible for now.
-    // TODO: Replace with proper NSAlert when Objective-C bridge is available.
-    fprintf(stderr, "[Reverse Lines] Author: Query Kuma, Version: 1.0.0 (macOS port)\n");
+    @autoreleasepool {
+        NSAlert *alert = [[NSAlert alloc] init];
+        alert.messageText = @"About Reverse Lines";
+        alert.informativeText = @"Author: Query Kuma\nVersion: 1.0.0.0";
+        alert.icon = [[NSImage alloc] initWithSize:NSMakeSize(1, 1)];
+        [alert addButtonWithTitle:@"OK"];
+        [alert runModal];
+    }
 }
 
 // ── Plugin exports ──────────────────────────────────────────────────────
