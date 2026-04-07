@@ -4,6 +4,7 @@ project(qkNppReverseLines LANGUAGES CXX OBJCXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_OBJCXX_STANDARD 17)
 set(CMAKE_CXX_VISIBILITY_PRESET hidden)
+set(CMAKE_OSX_ARCHITECTURES "arm64;x86_64")
 
 # Path to the Notepad++ macOS port for shared headers
 set(NPP_MACOS_DIR "${CMAKE_SOURCE_DIR}/../../notepad-plus-plus-macos")

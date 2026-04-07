@@ -128,7 +128,7 @@ static void aboutDlg()
         NSAlert *alert = [[NSAlert alloc] init];
         alert.messageText = @"About Reverse Lines";
         alert.informativeText = @"Author: Query Kuma\nVersion: 1.0.0.0";
-        alert.icon = [[NSImage alloc] initWithSize:NSMakeSize(1, 1)];
+        alert.icon = [[NSImage alloc] initWithContentsOfFile:[NSHomeDirectory() stringByAppendingPathComponent:@".notepad++/plugins/Config/logo100px.png"]];
         [alert addButtonWithTitle:@"OK"];
         [alert runModal];
     }
