@@ -33,5 +33,5 @@ set_target_properties(qkNppReverseLines PROPERTIES
 )
 
 # Install target: copy to plugins directory
-set(PLUGIN_INSTALL_DIR "$ENV{HOME}/.notepad++/plugins/qkNppReverseLines")
+set(PLUGIN_INSTALL_DIR "$ENV{HOME}/.nextpad++/plugins/qkNppReverseLines")
 install(TARGETS qkNppReverseLines DESTINATION "${PLUGIN_INSTALL_DIR}")
